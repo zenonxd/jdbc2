@@ -1,13 +1,19 @@
 Para realizarmos recuperação de dados precisamos entender duas classes do jdbc.
+
 Statement - Ela monta um comando sql para ser executado (recuperar dados). "INSER INTO", por exemplo.
+
 ResultSet - Representa um objeto contendo o resultado da consulta em forma de tabela. Você pode acessar os dados por colunas e linhas.
 
 ![image](https://github.com/zenonxd/jdbc2/assets/64092861/a396bade-5454-40f9-9e13-4d0ef0b0926a)
 
 O resultSet, tem operações pra você posicionar a consulta onde quiser, exemplo:
+
 first() - posiciona na posição 1, se houver. Exemplo na imagem acima: (computers). Se retornar nada, o resultset não vai ter a posição 1.
+
 beforeFirst() - move para a posição 0.
+
 Next() - vai para o proximo. Se você faz o beforeFirst() e depois next(), ele vai pra posição 1. É muito util para percorrer o resultSet. Você faz uma estrutura while e você percorre tudo. O next pode retornar false se está no ultimo também. Se você está no 4 (books) e digita Next(), vai dar false.
+
 Absolute(int) - posiciona o resultset para a posição informada por você.
 
 //COMANDOS//
